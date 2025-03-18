@@ -5,7 +5,8 @@ import pool from "./db/db";
 
 const app = express();
 
-app.use();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello, Server is working!");

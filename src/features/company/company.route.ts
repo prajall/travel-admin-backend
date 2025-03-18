@@ -1,9 +1,9 @@
 import express from "express";
-import { createCompany, fetchUsers } from "./company.controller";
+import { createCompany, fetchCompanies } from "./company.controller";
 
 const router = express.Router();
 
-router.get("/", fetchUsers);
+router.get("/", fetchCompanies);
 router.post("/", createCompany);
 
 export default router;
